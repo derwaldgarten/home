@@ -52,10 +52,9 @@ nav a:hover {
 
 /* Sections */
 .section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 6rem 1.5rem 3rem;
+  min-height: auto;
+  display: block;
+  padding: 4rem 1.5rem;
 }
 
 .section.alt {
@@ -63,10 +62,7 @@ nav a:hover {
 }
 
 .intro {
-  background:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-    url("waldgarten.jpg") center / cover no-repeat;
-  color: #fff;
+  /* intro has inline image now; keep default text color */
 }
 
 .content {
@@ -104,4 +100,176 @@ li {
     gap: 1rem;
     font-size: 0.9rem;
   }
+}
+
+/* Header hero image */
+.site-header {
+  height: 320px;
+  background: url('Header.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.site-header-inner {
+  width: 100%;
+  background: linear-gradient(transparent, rgba(0,0,0,0.25));
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Ensure main content isn't hidden under the fixed nav */
+main {
+  margin-top: 4.5rem;
+}
+
+/* Layout: main content + sidebar */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "project sidebar"
+    "main    sidebar";
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Place project in the left column and sidebar in the right column; main content flows below */
+.layout > .project {
+  grid-area: project;
+  padding: 2rem 1.5rem 1rem;
+}
+.main-content {
+  grid-area: main;
+}
+.sidebar {
+  grid-area: sidebar;
+  align-self: start;
+}
+
+.main-content {
+  min-width: 0;
+}
+
+.section-photo {
+  height: 340px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.section-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section-photo.focus-top img {
+  /* Shift image further to the left and anchor at top so right-side subject is cropped out */
+  object-position: 15% top;
+}
+
+.section-photo.focus-center img {
+  object-position: center;
+}
+
+.sidebar {
+  align-self: start;
+}
+
+.sidebar-inner {
+  position: sticky;
+  top: 5.25rem; /* below fixed nav */
+  background: rgba(255,255,255,0.85);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.sidebar h4 {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.sidebar a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.map-block {
+  margin-bottom: 1rem;
+}
+
+.map-block.map-link {
+  text-align: left;
+}
+
+.map-block.map-image {
+  text-align: center;
+}
+
+.map-thumb {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: 6px;
+  display: inline-block;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.map-credit {
+  font-size: 0.8rem;
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 880px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "project"
+      "main"
+      "sidebar";
+    padding: 0.75rem;
+  }
+  .sidebar-inner {
+    position: relative;
+    top: 0;
+    margin-bottom: 1.5rem;
+  }
+  .section-photo {
+    height: 200px;
+  }
+
+  .section-photo.focus-top img {
+    object-position: 10% top;
+  }
+}
+
+/* Footer */
+.site-footer {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  background: rgba(243, 241, 235, 0.6);
+}
+
+.site-footer .content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.site-footer a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
 }

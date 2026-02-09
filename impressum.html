@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum – Der Waldgarten</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<main class="content">
+  <h1>Impressum</h1>
+
+  <p>Angaben gemäß § 5 TMG:</p>
+
+  <address>
+    Torben Sauerland<br />
+    Knickhagen 14<br />
+    34414 Warburg<br />
+  </address>
+
+  <p>
+    Kontakt:<br />
+    Telefon: <a href="tel:+491755029554">+49 175 5029554</a><br />
+    E-Mail: <span id="email">&nbsp;</span>
+  </p>
+
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>Torben Sauerland, Knickhagen 14, 34414 Warburg</p>
+
+  <h2>Online-Streitbeilegung</h2>
+  <p>
+    Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+    <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.
+    Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+  </p>
+
+  <h2>Haftung für Inhalte</h2>
+  <p>
+    Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+    Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen,
+    die auf eine rechtswidrige Tätigkeit hinweisen.
+  </p>
+
+  <h2>Umsatzsteuer</h2>
+  <p>Umsatzsteuer-Identifikationsnummer: keine Angabe.</p>
+
+</main>
+
+<script>
+// E‑Mail mit einfachem JavaScript vor Spam-Bots schützen
+(function(){
+  var user = 'sauerlandtorben';
+  var domain = 'posteo.de';
+  var email = user + '@' + domain;
+  var a = document.createElement('a');
+  a.href = 'mailto:' + email;
+  a.textContent = user + ' [at] ' + domain;
+  var el = document.getElementById('email');
+  if(el) el.textContent = '';
+  if(el) el.appendChild(a);
+})();
+</script>
+
+</body>
+</html>
