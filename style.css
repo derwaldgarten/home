@@ -54,7 +54,7 @@ nav a:hover {
 .section {
   min-height: auto;
   display: block;
-  padding: 4rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .section.alt {
@@ -64,7 +64,7 @@ nav a:hover {
 /* Landscape showcase section */
 .landscape-showcase {
   background: var(--bg-alt);
-  padding: 4rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .landscape-grid {
