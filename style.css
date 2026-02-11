@@ -61,6 +61,61 @@ nav a:hover {
   background: var(--bg-alt);
 }
 
+/* Landscape showcase section */
+.landscape-showcase {
+  background: var(--bg-alt);
+  padding: 4rem 1.5rem;
+}
+
+.landscape-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.landscape-item {
+  text-align: center;
+}
+
+.landscape-photo {
+  height: 320px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.landscape-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+}
+
+.landscape-item h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+.landscape-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.landscape-item-link:hover .landscape-photo img {
+  transform: scale(1.03);
+}
+
+.landscape-item-link:hover h3 {
+  color: var(--accent);
+}
+
 .intro {
   /* intro has inline image now; keep default text color */
 }
@@ -82,6 +137,10 @@ h2 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
 
+h3 {
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+}
+
 p {
   margin-bottom: 1.2rem;
 }
@@ -94,6 +153,10 @@ li {
   margin-bottom: 0.4rem;
 }
 
+.impressum-content {
+  max-width: 720px !important;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
   nav ul {
@@ -102,19 +165,31 @@ li {
   }
 }
 
+@media (max-width: 880px) {
+  .landscape-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .landscape-photo {
+    height: 240px;
+  }
+}
+
 /* Header hero image */
 .site-header {
-  height: 320px;
+  height: 480px;
   background: url('Header.jpg') center / cover no-repeat;
+  background-position: center 30%;
   display: flex;
   align-items: flex-end;
 }
 
 .site-header-inner {
   width: 100%;
-  background: linear-gradient(transparent, rgba(0,0,0,0.25));
-  color: #fff;
-  padding: 1.25rem 1.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.45));
+  color: #f3f1eb;
+  padding: 2rem 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -254,14 +329,17 @@ main {
 
 /* Footer */
 .site-footer {
-  padding: 1rem 1.5rem;
-  text-align: center;
+  padding: 2rem 1.5rem;
+  text-align: left;
   background: rgba(243, 241, 235, 0.6);
 }
 
 .site-footer .content {
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-footer a {

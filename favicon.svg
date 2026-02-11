@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="white"/>
+  
+  <!-- Roots -->
+  <g stroke="#000" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Left root -->
+    <path d="M 28 42 Q 20 48 18 52"/>
+    <!-- Center-left root -->
+    <path d="M 32 42 Q 26 50 24 54"/>
+    <!-- Center-right root -->
+    <path d="M 32 42 Q 38 50 40 54"/>
+    <!-- Right root -->
+    <path d="M 36 42 Q 44 48 46 52"/>
+  </g>
+  
+  <!-- Trunk -->
+  <g fill="#000">
+    <rect x="29" y="22" width="6" height="20" rx="1"/>
+  </g>
+  
+  <!-- Tree crown (stylized) -->
+  <g fill="#000">
+    <!-- Top circle -->
+    <circle cx="32" cy="16" r="10"/>
+    <!-- Left side circle -->
+    <circle cx="18" cy="22" r="8"/>
+    <!-- Right side circle -->
+    <circle cx="46" cy="22" r="8"/>
+    <!-- Overlapping to create organic shape -->
+    <circle cx="32" cy="26" r="7" opacity="0.9"/>
+  </g>
+</svg>
