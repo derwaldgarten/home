@@ -116,10 +116,6 @@ nav a:hover {
   color: var(--accent);
 }
 
-.intro {
-  /* intro has inline image now; keep default text color */
-}
-
 .content {
   max-width: 720px;
   margin: 0 auto;
@@ -178,7 +174,7 @@ li {
 
 /* Header hero image */
 .site-header {
-  height: 480px;
+  height: 380px;
   background: url('Header.jpg') center / cover no-repeat;
   background-position: center 30%;
   display: flex;
