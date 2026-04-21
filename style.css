@@ -347,3 +347,30 @@ main {
 .site-footer a:hover {
   color: var(--accent);
 }
+
+.guided-visits {
+  margin: 1.1rem 0 1.2rem;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(107, 143, 113, 0.38);
+  background: linear-gradient(140deg, rgba(107, 143, 113, 0.16), rgba(255, 255, 255, 0.96));
+  box-shadow: 0 4px 14px rgba(47, 58, 47, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.sidebar .guided-visits h4 {
+  margin-bottom: 0.35rem;
+  color: #365a3c;
+}
+
+.guided-visits p {
+  margin-bottom: 0.55rem;
+}
+
+.guided-visits ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.guided-visits li:last-child {
+  margin-bottom: 0;
+}
